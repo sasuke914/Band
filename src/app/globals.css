@@ -2,26 +2,186 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --primaryBgColor: #171717;
+    --primaryWhiteColor: #ffffff;
+    --secondaryWhiteColor: #f9f9f9;
+    --darkTextColor: #404040;
+    --secondaryWhiteHover: #cfcfcf;
+    --auditoriumColor: #D6D6D6;
+    --badgeBgColor: #EFEFEF;
+    --badgeColor: #686868;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --primaryBgColor: #e8e8e8;
+    --primaryWhiteColor: #0a0a0a;
+    --secondaryWhiteColor: #171717;
+    --darkTextColor: #bfbfbf;
+    --secondaryWhiteHover: #3f3f3f;
+    --auditoriumColor: #292929;
+    --badgeBgColor: #202020;
+    --badgeColor: #919191;
+  }
+
+  .bg-primaryBgColor {
+    background-color: var(--primaryBgColor);
+  }
+
+  .text-primaryWhiteColor {
+    color: var(--primaryWhiteColor);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+@layer base {
+  body {
+    @apply h-full bg-primaryBgColor text-primaryWhiteColor;
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  html {
+    @apply h-full;
+  }
+
+  .absoluteCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .flexFull {
+    flex: 1 1 auto;
+    transition: flex-basis 0.5s ease;
+  }
+
+  .itemCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .itemEnd {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .spaceBetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .heroTitle {
+    font-size: clamp(40px, 6vw, 78px);
+    line-height: clamp(44px, 6vw, 93.99px);
+    color: var(--secondaryWhiteColor);
+    letter-spacing: 0.03em;
+  }
+
+  .spaceAround {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .spaceEnd {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .alignCenter {
+    display: flex;
+    align-items: center;
+  }
+
+  .flexWrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .flexWrapAround {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .flexWrapBetween {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .pageTitle {
+    font-size: clamp(40px, 6vw, 77px);
+    line-height: clamp(44px, 6vw, 93.99px);
+    color: var(--secondaryWhiteColor);
+  }
+
+  .sectionTitle {
+    font-size: clamp(30px, 4vw, 58px);
+    line-height: clamp(36.15px, 4vw, 69.89px);
+    color: var(--secondaryWhiteColor);
+    letter-spacing: -0.03em;
+  }
+
+  .cardBigTitle {
+    font-size: clamp(20px, 3vw, 30px);
+    line-height: clamp(24.1px, 1vw, 36.15px);
+  }
+
+  .cardTitle {
+    font-weight: 700;
+    font-size: clamp(18px, 2vw, 24px);
+    line-height: clamp(22.59px, 2.5vw, 30.12px);
+    letter-spacing: -0.03em;
+  }
+
+  .cardDescription {
+    font-size: clamp(14px, 2vw, 18px);
+    line-height: clamp(19.6px, 2.5vw, 25.2px);
+    text-align: left;
+  }
+
+  .auditoriumTextSize {
+    font-size: clamp(12px, 2vw, 18px);
+    line-height: clamp(15.06px, 2vw, 25.2px);
+    color: var(--primaryBgColor);
+  }
+
+  .rentalSmallText {
+    font-size: clamp(14px, 2vw, 28px);
+    line-height: clamp(17.57px, 3vw, 39.2px);
+    font-weight: 500;
+    color: #686868;
+    letter-spacing: -0.01em;
+  }
+
+  .eventSectionText {
+    padding: clamp(10px, 2vw, 20px) 0 clamp(20px, 3vw, 30px) 0;
+  }
+
+  .mobileShow {
+    display: block;
+  }
+
+  .mobileHidden {
+    display: none;
   }
 }
