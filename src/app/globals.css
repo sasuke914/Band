@@ -37,7 +37,7 @@
 
 @layer base {
   body {
-    @apply h-full bg-primaryBgColor text-primaryWhiteColor;
+    @apply bg-primaryBgColor text-primaryWhiteColor;
   }
 
   html {
@@ -175,6 +175,10 @@
 
   .eventSectionText {
     padding: clamp(10px, 2vw, 20px) 0 clamp(20px, 3vw, 30px) 0;
+  }
+
+  .show {
+    display: block !important;
   }
 
   .mobileShow {

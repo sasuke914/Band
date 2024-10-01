@@ -3,6 +3,8 @@ import "./globals.css";
 import { russo_one } from "@/components/ui/font";
 import AuthProvider from "./provider/auth";
 import UiProvider from "./provider/uiProvider";
+import Header from "@/components/common/header";
+import Footer from "@/components/common/footer";
 
 export const metadata: Metadata = {
   title: "Band",
@@ -21,7 +23,11 @@ export default function RootLayout({
       >
         {/* <AuthProvider> */}
         <UiProvider>
-          {children}
+          <div className="container">
+            <Header />
+            {children}
+            <Footer />
+          </div>
         </UiProvider>
         {/* </AuthProvider> */}
       </body>

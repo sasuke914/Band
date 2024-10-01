@@ -1,0 +1,44 @@
+.topHeader {
+  padding: 40px clamp(10px, 4vw, 53px) 0;
+  transition: padding 0.8s ease;
+}
+
+.sectionPadding {
+  padding: clamp(0px, 1vw, 15px) clamp(0px, 3vw, 31px) 26px clamp(0px, 1vw, 16px);
+  transition: padding 0.8s ease;
+}
+
+.headerInput {
+  position: relative;
+}
+
+.headerInput input {
+  background-color: transparent;
+  font-family: "Mulish";
+  width: 130px;
+  font-size: 12px;
+  border: none;
+  color: var(--secondaryWhiteColor);
+  font-weight: 700;
+  line-height: 15.06px;
+  letter-spacing: -0.03em;
+  text-align: left;
+}
+
+.headerInput input::placeholder {
+  background-color: transparent;
+  font-family: "Mulish";
+  width: 60px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15.06px;
+  letter-spacing: -0.03em;
+  border: none;
+  color: #404040;
+}
+
+
+
+.headerInput input:focus {
+  outline: none;
+}

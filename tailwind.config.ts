@@ -12,12 +12,15 @@ const config: Config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      // padding: "2rem",
       screens: {
         "2xl": "1440px",
       },
     },
     extend: {
+      maxWidth: {
+        '1440': '1440px',
+      },
       colors: {
         background: "var(--primaryBgColor)",
         foreground: "var(--primaryWhiteColor)",

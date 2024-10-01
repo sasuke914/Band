@@ -1,0 +1,19 @@
+.dropdown {
+  position: absolute;
+  right: 0;
+  left: 0px;
+  z-index: 9999;
+  min-width: 200px;
+  padding: 0.5rem 0;
+  list-style: none;
+  background-color: var(--primaryBgColor);
+  border-radius: 0.5rem;
+  display: none;
+  border: 1px solid #3f3f3f;
+}
+
+.dropdown-submenu {
+  position: absolute;
+  left: 100%;
+  top: -7px;
+}
