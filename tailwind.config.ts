@@ -49,7 +49,7 @@ const config: Config = {
   plugins: [
     require("tailwindcss-animate"),
     nextui(),
-    require("tailwindcss-scrollbar")
+    require("tailwindcss-scrollbar"),
   ],
 };
 export default config;

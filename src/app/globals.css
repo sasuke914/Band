@@ -35,6 +35,27 @@
   }
 }
 
+.body {
+  @apply bg-primaryBgColor text-primaryWhiteColor;
+}
+
+.heroSmallLink {
+  @apply p-[10px] h-[28px] itemCenter bg-[var(--secondaryWhiteHover)] rounded-[5px] text-[12px] text-[var(--primaryBgColor)] leading-[15.06px] tracking-[-0.03em]
+}
+
+.opacityLink {
+  @apply p-[10px] h-[28px] itemCenter bg-[#F6F6F638] rounded-[5px] text-[12px] font-bold leading-[15.06px] tracking-[-0.03em] font-normal
+}
+
+.bigTransButton {
+  padding: clamp(10px, 4vw, 18px) clamp(14px, 4vw, 30.5px);
+  font-size: clamp(14px, 2vw, 35px);
+  line-height: clamp(17.57px, 2vw, 44px);
+  height: clamp(30px, 5vw, 65px);
+  letter-spacing: -0.05em;
+  @apply bg-[#F6F6F638] md:rounded-[10px] rounded-[5px] text-[var(--secondaryWhiteColor)]
+}
+
 @layer base {
   body {
     @apply bg-primaryBgColor text-primaryWhiteColor;

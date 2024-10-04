@@ -2,7 +2,7 @@
 
 import { Image } from "@nextui-org/react";
 import { useState } from "react";
-import { Link as NextLink } from "@nextui-org/react";
+import Link from "next/link";
 import { Link as ScrollLink } from 'react-scroll';
 import { LuMenu } from "react-icons/lu";
 import { CircleButton, DefaultButton, RectButton } from "../Buttons";
@@ -24,11 +24,11 @@ export default function Header() {
     setSearchTerm(e.target.value)
   }
   return (
-    <div className="topHeader w-full fixed max-w-1440 bg-[var(--primaryBgColor)] z-10">
+    <div className="topHeader w-full fixed max-w-1440 bg-[var(--primaryBgColor)] z-50">
       <div className="spaceBetween sectionPadding">
-        <NextLink href="/">
-          <Image src="/icon/bigfooterLogo.png" alt="Band" width={98} height={42} />
-        </NextLink>
+        <Link href="/">
+          <img src="/icon/bigfooterLogo.png" alt="Band" width={98} height={42} />
+        </Link>
         <div className="headerInput hidden lg:block">
           <div className="alignCenter">
             <img style={{ cursor: 'pointer', marginRight: '5px' }} src="/icon/search.svg" alt="Search" width={18} height={18} />
@@ -36,12 +36,12 @@ export default function Header() {
           </div>
         </div>
         <span className="text-[var(--secondaryWhiteColor)] text-[14px] tracking-[-0.03em] hidden lg:block">+7 (495) 720-12-82</span>
-        <div className="hidden lg:flex">
-          <a href="https://web.telegram.org" rel="noreferrer" target="_blank">
-            <CircleButton scale='0.698' icon='/icon/darkTelegram.svg' width='16' height='16' />
-          </a>
+        <div className="hidden lg:flex gap-[10px]">
+          <Link href="https://web.telegram.org" rel="noreferrer" target="_blank">
+            <CircleButton icon='/icon/darkTelegram.svg' width='16' height='16' />
+          </Link>
           <a href="https://vk.com" rel="noreferrer" target="_blank">
-            <CircleButton scale='0.698' icon='/icon/darkVK.svg' width='18' height='11' />
+            <CircleButton icon='/icon/darkVK.svg' width='18' height='11' />
           </a>
         </div>
         <div className="hidden lg:block">

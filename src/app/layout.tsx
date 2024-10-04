@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${russo_one.className} antialiased`}
+        className={`${russo_one.className} antialiased body`}
       >
         {/* <AuthProvider> */}
         <UiProvider>
